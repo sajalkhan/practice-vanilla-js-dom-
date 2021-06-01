@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1,
+h2 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #b1c9bb;
+  padding: 0 0 10px;
+  color: #57635c;
+}
+
+.box {
+  padding: 10px 15px;
+  border: 2px solid #b1c9bb;
+  border-radius: 5px;
+  background: #fff;
+  margin: 15px 0;
+}
+
+.todo-list {
+  float: left;
+  width: 46%;
+}
+
+.complete-list {
+  float: right;
+  width: 46%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+
+.update {
+  float: right;
+  background-color: blue;
+  color: white;
+  border: 0px;
+  padding: 3px 5px;
+}
+
+.delete {
+  float: right;
+  background-color: red;
+  color: white;
+  border: 0px;
+  padding: 3px 5px;
+}
+/*# sourceMappingURL=style.css.map */
