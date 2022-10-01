@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url(ibm-plex-mono.woff2), url(ibm-plex-mono.woff);
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(youngserif.woff2), url(youngserif.woff);
+}
+
+
+body {
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  line-height: 1.6;
+
+  background-color: #ffffff;
+  color: #2a2a2a;
+  overflow-x: hidden;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100vh;
+  background-color: #00b98d;
+  color: #ffffff;
+  text-align: center;
+  transition: left 0.5s;
+
+  font-family: "Young Serif";
+  font-size: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 5px 32px 5px 32px;
+  }
+}
+
+.p-plant {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+
+  &.open {
+    transform: translate(240px, 0);
+  }
+
+  &__menu {
+    height: 40px;
+    width: 100%;
+    margin: 10px 0 20px 50px;
+    color: #000000;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  &__container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--slides {
+      position: relative;
+      width: 375px;
+      height: 450px;
+      cursor: pointer;
+
+      >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        transition: transform 0.5s, box-shadow 0.5s;
+        pointer-events: none;
+
+        &:first-child {
+          z-index: 1;
+        }
+
+        &:displayed {
+          animation: fade 0.2s;
+
+        }
+      }
+
+      &:hover img {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &--content {
+      padding: 30px;
+      width: 50%;
+
+      &-button {
+        margin-top: 15px;
+        display: inline-block;
+        background-color: #00b98d;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 15px 10px 15px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
