@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer type="text/javascript" src="index.js"></script>
+  <link href="./style/style.css" rel="stylesheet" />
+  <title>Type Checker</title>
+</head>
+
+<body>
+  <div class="p-typeChecker">
+    <section class="p-typeChecker__options">
+      <h1>
+        Type Checker
+      </h1>
+
+      <div class="p-typeChecker__options--option">
+        <label>Your text</label>
+        <input type="text" name="sentence" placeholder="The quick brown fox...">
+      </div>
+
+      <div class="p-typeChecker__options--option">
+        <label>Typeface</label>
+        <select name="typeface">
+          <option value="Fira Sans">Fira Sans</option>
+          <option value="Prompt">Prompt</option>
+          <option value="Taviraj">Taviraj</option>
+          <option value="Trirong">Trirong</option>
+        </select>
+      </div>
+
+      <div class="p-typeChecker__options--option">
+        <label>Type size <span class="typeSize-output">64px</span></label>
+        <input type="range" name="typeSize" min=12 max=200 value=64>
+      </div>
+
+      <div class="p-typeChecker__options--option">
+        <label>Font weight <span class="fontWeight-output">400</span></label>
+        <input type="range" name="fontWeight" min=100 max=900 value=400 step=100 />
+      </div>
+
+      <div class="p-typeChecker__options--option">
+        <label>Leading <span class="lineHeight-output">1.5</span></label>
+        <input type="range" name="lineHeight" min=0.7 max=2.5 value=1.5 step=0.1>
+      </div>
+
+      <div class="p-typeChecker__options--option-checkbox">
+        <label>Italic</label>
+        <input type="checkbox" name="italic">
+      </div>
+
+      <div class="p-typeChecker__options--option">
+        <label>Colors</label>
+        <div class="p-typeChecker__colors">
+          <div style="background-color: #2a2a2a; color: #ffffff;" class="selected">a</div>
+          <div style="background-color: #ffffff; color: #2a2a2a;">a</div>
+          <div style="background-color: #63ff03; color: #2a2a2a;">a</div>
+          <div style="background-color: #ee0073; color: #ffffff;">a</div>
+        </div>
+      </div>
+    </section>
+
+
+    <textarea class="p-typeChecker__output">The quick brown fox jumps over the lazy dog</textarea>
+  </div>
+
+</body>
+
+</html>
