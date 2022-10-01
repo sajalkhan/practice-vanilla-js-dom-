@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url(syne-regular.woff2), url(syne-regular.woff);
+}
+
+@font-face {
+  font-family: "Syne Extra";
+  src: url(syne-extra.woff2), url(syne-extra.woff);
+}
+
+body {
+  font-family: "Syne", Arial;
+  font-size: 32px;
+  line-height: 1.25;
+  background-color: #f4e6d8;
+  color: #15403d;
+  margin: 240px auto 240px auto;
+  max-width: 1120px;
+  overflow-x: hidden;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+p {
+  font-family: "Syne Extra";
+  color: #e5745d;
+}
+
+.p-blog__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  z-index: 1;
+}
+
+.p-blog__header img {
+  width: 136px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.p-blog__header.scroll img {
+  width: 64px;
+}
+
+.p-blog__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 80px 0 80px 0;
+}
+
+.p-blog__section:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.p-blog__section--container {
+  padding: 40px;
+  position: relative;
+}
+
+.p-blog__section img {
+  position: relative;
+}
+
+.p-blog__stamps {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+}
+
+.p-blog__stamps > img {
+  z-index: 99;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: spin 30s linear infinite;
+          animation: spin 30s linear infinite;
+}
+/*# sourceMappingURL=style.css.map */
